@@ -34,7 +34,17 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+       .when('/detalle/:id', {
+        templateUrl: 'views/detalle.html',
+        controller: 'DetalleCtrl',
+        controllerAs: 'detalle',
+      })
+       .when('/new', {
+        templateUrl: 'views/new.html',
+        controller: 'NewCtrl',
+        controllerAs: 'new',
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: ''
       });
   });

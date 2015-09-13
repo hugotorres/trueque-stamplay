@@ -9,7 +9,17 @@
  */
 angular.module('truequeStamplayApp')
   .controller('MainCtrl', function ($scope,$stamplay) {
+  	$scope.items=[];
+    $scope.getItems= function(){
 
+		$.get( "https://trueque.stamplayapp.com/api/cobject/v1/item", function( data ) {
+		 $scope.items = data;
+		 console.log($scope.items);
+		});
+
+    }
+
+    $scope.getItems();
 
 	var user = $stamplay.User().Model
 	

@@ -1,0 +1,10 @@
+{
+  "appId": "trueque",
+  "apiKey": "10676f4d359dad2ae93fb08dc2c1df9513bbb91f5ad0b050549a730ef9c51732",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

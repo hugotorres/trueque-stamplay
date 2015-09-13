@@ -1,0 +1,43 @@
+
+
+<div class="col-sm-6 panel">
+<div class="panel-title">  <h1>Log in</h1></div>
+
+<div class="panel-body">
+
+ <a class="btn btn-block btn-social btn-lg btn-facebook" id="fb-login">
+              <i class="fa fa-facebook"></i>Sign in with Facebook
+            </a>
+            </div>
+
+</div>
+
+
+
+<div class="col-sm-6 panel">
+<div class="panel-title">  <h1>Sign up</h1></div>
+
+<form class="form"   id="signIn" >
+<input class="form-control" type="text" name="displayName" id="displayNAme" placeholder="Display Name"></input>
+<input class="form-control" type="text" name="email" id="email" placeholder="Email"></input>
+
+
+<input class="form-control" placeholder="password" name="password" id="password"></input>
+<a class="btn btn-success" ng-click="newUser()">Enviar</a>
+
+</form>
+
+</div>
+
+<script>
+  var user = new Stamplay.User().Model;
+  $('#fb-login').on('click', function(e) {
+    e.preventDefault();
+    user.login('facebook');  
+  });
+  user.currentUser().then(function() {
+    if(user.get('_id')){
+      document.location.href= "#/about";
+    }
+  });
+ </script>
